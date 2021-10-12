@@ -12,3 +12,41 @@ renderer.link = function (href, title, text) {
   return `<a target="_blank" href="${href}">${text}</a>`;
 };
 
+class App extends React.Component {
+    constructor(props){
+        super(props);
+        this.state={
+            markdown:placeholder,
+            editorFullSize: false,
+            previewFullSize: false
+        }
+        this.handleChange = this.handleChange.bind(this);
+        this.handleEditorFullSize = this.handleEditorFullSize.bind(this);
+        this.handlePreviewFullSize = this.handlePreviewFullSize.bind(this);
+    }
+    handleChange(event){
+        this.setState({
+            markdown:event.target.value
+        })
+    }
+    handleEditorFullSize(){
+        this.setState({
+            editorFullSize:!this.state.editorFullSize
+        })
+    }
+    handlePreviewFullSize(){
+        this.setState({
+            previewFullSize:!this.state.previewFullSize
+        })
+    }
+    render(){
+        return (
+            <div>
+            <p>Something cool IDK</p>
+            </div>
+        );
+    }
+
+}
+
+const placeholder = `Some wild code that i'm to busy to write myself`;

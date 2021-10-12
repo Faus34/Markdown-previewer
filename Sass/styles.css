@@ -2,14 +2,28 @@ html {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1rem;
   margin: 10px 0;
+  padding: 0;
   text-align: left;
 }
 
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
 #app {
+  position: relative;
   background: pink;
   width: 10rem;
   height: 10rem;
   border-radius: 2rem;
-  margin: 2rem;
 }
 /*# sourceMappingURL=styles.css.map */
