@@ -1,4 +1,12 @@
+//import React from 'react';
+//import ReactDOM from 'react-dom';
+
 // This methods is part of the marked library and allows line breaks with return button 
+alert('I am in');
+console.log('im here')
+const pinkCube = document.getElementById('app');
+pinkCube.style.background = 'red';
+
 marked.setOptions({
   breaks: true,
   highlight: function (code) {
@@ -102,10 +110,10 @@ const Preview = (props) =>{
       dangerouslySetInnerHTML={{
         __html: marked(props.markdown, { renderer: renderer })
       }}
-      id="preview"
-    />
+      id="preview">
+    </div>
   );
-}
+};
 
 const placeholder = `Some wild code that i'm to busy to write myself`;
 
